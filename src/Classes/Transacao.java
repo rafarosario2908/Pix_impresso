@@ -1,12 +1,12 @@
 package Classes;
 
 public class Transacao {
-    private int idtransacao; 
-    private int idConta;
-    private int idCaixaEletronico;
-    private int dataHora;
-    private double valor;
-    // (C- credito D-debito)
-    private char tipoTransacao;
-
+  private int idTransacao;
+  private int idConta;
+  private int idCaixaEletronico;
+  private String dataHora;
+  private double valor;
+  // (C-Crédito | D-Débito)
+  private char tipoTransacao;
+  
 }
