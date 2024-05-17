@@ -13,10 +13,11 @@ public abstract class Conta implements IConta {
     protected int tipoConta;
     protected String numeroCartao;
     protected String senha;
+    protected double saldo;
 
     public Conta(int idConta, int numero, int agencia,
             int digitoVerificador, String nome,
-            String cpf, String numeroCartao, String senha) {
+            String cpf, String numeroCartao, String senha, double saldo) {
         this.idConta = idConta;
         this.numero = numero;
         this.agencia = agencia;
@@ -25,6 +26,8 @@ public abstract class Conta implements IConta {
         this.cpf = cpf;
         this.numeroCartao = numeroCartao;
         this.senha = senha;
+        this.saldo = saldo;
+        setTipoConta();
     }
 
     public int getIdConta() {
@@ -97,6 +100,14 @@ public abstract class Conta implements IConta {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
 }
